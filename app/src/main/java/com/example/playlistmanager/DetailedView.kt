@@ -1,20 +1,26 @@
 package com.example.playlistmanager
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class DetailedView : AppCompatActivity() {
+    private lateinit var textViewSummary: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_detailed_view)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+        val textView = findViewById<TextView>(R.id.textViewSummary)
+
+        val song = intent.getStringArrayListExtra("songs") ?: arrayListOf()
+        val artist = intent.getStringArrayListExtra("artists") ?: arrayListOf()
+        val ratings = intent.getIntegerArrayListExtra("ratings") ?: arrayListOf()
+        val comments = intent.getStringArrayListExtra("comments") ?: arrayListOf()
+
+        //val averageRating = if(ratings.isNotEmpty())
     }
 }

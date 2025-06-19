@@ -55,12 +55,12 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            songs.add(song)
+            /*songs.add(song)
             artists.add(artist)
             rating.add(ratings)
             comment.add(comments)
             Toast.makeText(this, "Entry added",
-                Toast.LENGTH_SHORT).show()
+                Toast.LENGTH_SHORT).show()*/
 
         }
     exitBtn.setOnClickListener {
