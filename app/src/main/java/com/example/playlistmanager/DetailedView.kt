@@ -21,6 +21,14 @@ class DetailedView : AppCompatActivity() {
         val ratings = intent.getIntegerArrayListExtra("ratings") ?: arrayListOf()
         val comments = intent.getStringArrayListExtra("comments") ?: arrayListOf()
 
-        //val averageRating = if(ratings.isNotEmpty())
+        val averageRating = if (ratings.isNotEmpty()) ratings.sum() / ratings.size else 0
+
+        val summary = StringBuilder()
+        for (i in song.indices) {
+            summary.append("Song: $song, Artist: $artist, Ratings: $ratings, Comments: $comments")
+        }
+        summary.append("\nAverage Ratings: $averageRating")
+
+        textView.text = summary.toString()
     }
 }
