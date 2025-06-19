@@ -65,7 +65,8 @@
 
     <Button
         android:id="@+id/playlistbtn"
-        android:layout_width="wrap_content"
+        android:backgroundTint="@color/black"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="216dp"
         android:text="Add to Playlist"
@@ -77,19 +78,21 @@
 
     <Button
         android:id="@+id/detailBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="124dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="@color/black"
         android:text="Detail"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="16sp"/>
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/exitBtn"
-        android:layout_width="wrap_content"
+        android:backgroundTint="@color/black"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
         android:text="Exit"
