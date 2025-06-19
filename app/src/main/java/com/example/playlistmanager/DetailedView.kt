@@ -1,5 +1,6 @@
 package com.example.playlistmanager
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -42,4 +43,11 @@ class DetailedView : AppCompatActivity() {
     val summary = StringBuilder()
     summary.append("\nAverage Ratings: $averageRating")
             textView.text = summary.toString()
-}}}
+}
+        returnBtn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+
+        }
+
+    }}
